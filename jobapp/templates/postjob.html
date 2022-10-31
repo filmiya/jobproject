@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+        background:#E0EAFC;
+        }
+        table{
+        border-collapse:collapse;
+        border:3px solid white;
+        width:80px;
+        height:60px;
+        }
+        table,th,td{
+        text-align:center;
+
+        }
+        th{
+        height:40px;
+        border:3px solid white;
+        }
+        td{
+        border:3px solid white;
+        }
+        table{
+        width:80%;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>Post Job</h1>
+
+<form method="post">{% csrf_token%}
+
+   <table border="1" align="center" >
+       <tr>
+       <th>Job title</th>
+       <td><input type="text" placeholder="job title" name="jname" ></td>
+           </tr>
+       <tr>
+       <th>Company name</th>
+       <td><input type="text" placeholder="Company Name" name="cname"></td>
+           </tr>
+       <tr>
+       <th>Experienced Required</th>
+       <td><select name="extype">
+           <option value="0-1">0-1</option>
+           <option value="2-3">2-3</option>
+           <option value="4-5">4-5</option>
+           <option value="6-7">6-7</option>
+           <option value="8-9">8-9</option>
+           <option value="10-11">10-11</option>
+
+       </select></td>
+       </tr>
+       <tr>
+           <th>Work place type</th>
+       <td><select name="wptype">
+           <option value="remote">Remote</option>
+           <option value="hybrid">Hybrid</option>
+       </select></td>
+           </tr>
+       <tr>
+       <th>Employment type</th>
+       <td><select name="wtype">
+           <option value="fulltime">Full time</option>
+           <option value="parttime">Part time</option>
+       </select></td>
+           </tr>
+       <tr>
+       <th>Job description</th>
+       <td><textarea placeholder="Enter description"  name="jobname"></textarea></td><br>
+       </tr>
+       <tr>
+           <th colspan="2"><button type="submit" align="center"><b>Post job</b></button></th>
+       </tr>
+   </table>
+
+</form>
+    </center>
+<a href="http://127.0.0.1:8000/login/">Back to home</a>
+</body>
+</html>
